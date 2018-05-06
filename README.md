@@ -2,4 +2,4 @@
 
 ddd sample in python for developing or testing
 
-configure the project directory to $PYTHONPATH
+configure the cargo directory to $PYTHONPATH
