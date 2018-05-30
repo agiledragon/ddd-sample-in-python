@@ -1,10 +1,10 @@
-from domain.model.base.entity import Entity
+from domain.model.base.aggregate_root import AggregateRoot
 from domain.model.delivery import Delivery
 
 
-class Cargo(Entity):
+class Cargo(AggregateRoot):
     def __init__(self, cargo_id, delivery):
-        Entity.__init__(self, cargo_id)
+        AggregateRoot.__init__(self, cargo_id)
         self._delivery = delivery
 
     def delay(self, days):

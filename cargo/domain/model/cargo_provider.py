@@ -1,8 +1,15 @@
-from domain.model.base.provider import Provider
+_caro_provider = None
 
 
-class CargoProvider(Provider):
+def set_cargo_provider(provider):
+    global _caro_provider
+    _caro_provider = provider
 
-    def confirm(self, cargo):
-        pass
+
+def get_cargo_provider():
+    return _caro_provider
+
+
+
+
 

@@ -1,13 +1,16 @@
+from domain.service.cargo_service import CargoService
 
-class CargoApi(object):
 
-    def __init__(self, cargo_service):
-        self._cargo_service = cargo_service
+def create_cargo(cargo_id, after_days):
+    CargoService().create(cargo_id, after_days)
 
-    def create_cargo(self, msg):
-        self._cargo_service.create(msg.cargo_id, msg.after_days)
 
-    def delay(self, cargo_id, days):
-        self._cargo_service.delay(cargo_id, days)
+def delay_cargo(cargo_id, days):
+    CargoService().delay(cargo_id, days)
+
+
+def get_cargo_after_days(cargo_id):
+    return CargoService().get_after_days(cargo_id)
+
 
 

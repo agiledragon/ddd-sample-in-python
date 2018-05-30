@@ -1,7 +1,7 @@
 from domain.model.base.provider import Provider
 
 
-class StubCargoProvider(Provider):
+class SpyCargoProvider(Provider):
 
     def __init__(self):
         self._cargo_id = 0

@@ -1,7 +1,7 @@
-from domain.model.cargo_provider import CargoProvider
+from domain.model.base.provider import Provider
 
 
-class CargoProviderImpl(CargoProvider):
+class CargoProviderImpl(Provider):
 
     def confirm(self, cargo):
         print 'confirm cargo'

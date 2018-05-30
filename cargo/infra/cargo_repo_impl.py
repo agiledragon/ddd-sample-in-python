@@ -1,7 +1,7 @@
-from domain.model.cargo_repo import CargoRepo
+from domain.model.base.repo import Repo
 
 
-class CargoRepoImpl(CargoRepo):
+class CargoRepoImpl(Repo):
 
     def add(self, id, obj):
         print 'add cargo'

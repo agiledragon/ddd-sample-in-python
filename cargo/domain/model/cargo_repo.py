@@ -1,18 +1,15 @@
 from domain.model.base.repo import Repo
 
 
-class CargoRepo(Repo):
+_caro_repo = Repo()
 
-    def add(self, id, obj):
-        pass
 
-    def remove(self, id):
-        pass
+def set_cargo_repo(repo):
+    global _caro_repo
+    _caro_repo = repo
 
-    def update(self, id, obj):
-        pass
 
-    def get(self, id):
-        pass
+def get_cargo_repo():
+    return _caro_repo
 
-    
+

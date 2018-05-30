@@ -1,21 +1,25 @@
-from abc import abstractmethod
-
 
 class Repo(object):
 
-    @abstractmethod
+    def __init__(self):
+        self._repo = {}
+
     def add(self, id, obj):
-        raise NotImplementedError
+        if self._repo.has_key(id):
+            return False
+        self._repo[id] = obj
+        return True
 
-    @abstractmethod
     def remove(self, id):
-        raise NotImplementedError
+        if self._repo.has_key(id):
+            del self._repo[id]
 
-    @abstractmethod
     def update(self, id, obj):
-        raise NotImplementedError
+        if self._repo.has_key(id):
+            self._repo[id] = obj
+            return True
+        return False
 
-    @abstractmethod
     def get(self, id):
-        raise NotImplementedError
+        return self._repo[id]
 
