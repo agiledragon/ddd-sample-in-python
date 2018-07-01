@@ -38,6 +38,7 @@ class CargoTest(unittest.TestCase):
         self.assertEqual(self._cargo_id, provider.cargo_id)
         self.assertEqual(self._after_days, provider.after_days)
         self.assertEqual(self._after_days, after_days)
+        destroy_cargo(self._cargo_id)
 
     def test_delay_cargo(self):
         create_cargo(self._cargo_id, self._after_days)
@@ -47,6 +48,7 @@ class CargoTest(unittest.TestCase):
         self.assertEqual(self._cargo_id, provider.cargo_id)
         self.assertEqual(self._after_days + 5, provider.after_days)
         self.assertEqual(self._after_days + 5, after_days)
+        destroy_cargo(self._cargo_id)
 
 
 if __name__ == '__main__':

@@ -26,4 +26,5 @@ class CargoService(object):
         if cargo is not None:
             return cargo.after_days
 
-
+    def destroy(self, cargo_id):
+        self._cargo_repo.remove(cargo_id)

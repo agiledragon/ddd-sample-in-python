@@ -13,4 +13,5 @@ def get_cargo_after_days(cargo_id):
     return CargoService().get_after_days(cargo_id)
 
 
-
+def destroy_cargo(cargo_id):
+    CargoService().destroy(cargo_id)
